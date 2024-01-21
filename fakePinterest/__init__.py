@@ -16,6 +16,9 @@ app = Flask(__name__)
 #     link_banco_dados = "sqlite:///comunidade.db"
 # Banco de Dados PostgreSQL no "dashboard.render.com" DATABASE_URL
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+# EXECUTAR SOMENTE UMA VEZ O SCRIPT "01_Aux_criarBanco.py" 
+# Para a criação da Tabela no Banco de Dados PostgreSQL no "dashboard.render.com" DATABASE_URL
+# app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://bancofakepinterest_user:WsjYGW1F13HYX49TAtgc0o78WjzPflYa@dpg-cmmm4bv109ks739a53pg-a.oregon-postgres.render.com/bancofakepinterest"
 # Banco de Dados no Meu Computador
 # app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///comunidade.db"
 app.config["SECRET_KEY"] = "cee335885f8d3032694af2e5ba47fda0"
