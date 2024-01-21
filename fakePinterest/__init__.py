@@ -14,7 +14,10 @@ app = Flask(__name__)
 #     link_banco_dados = os.getenv("DATABASE_URL")
 # else:
 #     link_banco_dados = "sqlite:///comunidade.db"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///comunidade.db"
+# Banco de Dados PostgreSQL no "dashboard.render.com" DATABASE_URL
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+# Banco de Dados no Meu Computador
+# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///comunidade.db"
 app.config["SECRET_KEY"] = "cee335885f8d3032694af2e5ba47fda0"
 app.config["UPLOAD_FOLDER"] = "static/fotos_posts"
 
