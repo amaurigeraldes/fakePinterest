@@ -1,12 +1,19 @@
 # Arquivo __ini__ é obrigatório em uma aplicação Flask e é onde é definido o app
 # Obs.: É onde é criado o nosso site
 
+import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_bcrypt import Bcrypt
 
+
 app = Flask(__name__)
+# Tratamento para situações do Banco de Dados ONLINE ou OFFLINE
+# if os.getenv("DEBUG") == 0:
+#     link_banco_dados = os.getenv("DATABASE_URL")
+# else:
+#     link_banco_dados = "sqlite:///comunidade.db"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///comunidade.db"
 app.config["SECRET_KEY"] = "cee335885f8d3032694af2e5ba47fda0"
 app.config["UPLOAD_FOLDER"] = "static/fotos_posts"
