@@ -1,15 +1,3 @@
-# Pastas e arquivos a serem desconsiderados
-Layout
-2023 12 21 Apostila Python Impressionador.pdf
-Atalhos de Teclado no Jupyter Modo Edição e Comando.xlsx
-Como Converter Arquivos Jupyter para Python.docx
-COMO CRIAR UM AMBIENTE VIRTUAL NO VS CODE.docx
-Exemplo de formatação.ipynb
-
-
-
-
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -154,6 +142,11 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+Include
+Layout
+Scripts
+
 
 # Pyre type checker
 .pyre/
